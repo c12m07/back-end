@@ -8,28 +8,29 @@ runDotEnv();
 
 const config = {
   development: {
-    username: "db_a1dm_user",
-    password: "G6VwUvTduSeadfwMJeed1ZHZmmFNLroa",
-    database: "db_a1dm",
-    host: "dpg-ce0fvuen6mpu84u1srb0-a",
-    logging: true,
-    dialect: "postgres"
+    username: process.env.DB_DEV_USER,
+    password: process.env.DB_DEV_PASSWORD,
+    database: process.env.DB_DEV_DB_NAME,
+    host: process.env.DB_DEV_HOST,
+    logging: console.log,
+    dialect: 'postgres',
   },
   test: {
-    username: "postgres",
-    password: "postgres",
-    database: "db_testeo",
-    host: "localhost",
-    logging: true,
-    dialect: "postgres"
+    username: process.env.DB_TEST_USER || 'postgres',
+    password: process.env.DB_TEST_PASSWORD || 'postgres',
+    database: process.env.DB_TEST_DB_NAME || 'db_testing',
+    host: process.env.DB_TEST_HOST || '127.0.0.1',
+    port: process.env.DB_TEST_PORT || 5432,
+    logging: console.log,
+    dialect: 'postgres',
   },
   production: {
-    username: "db_a1dm_user",
-    password: "G6VwUvTduSeadfwMJeed1ZHZmmFNLroa",
-    database: "db_a1dm",
-    host: "dpg-ce0fvuen6mpu84u1srb0-a",
-    logging: true,
-    dialect: "postgres"
+    username: process.env.DB_DEV_USER,
+    password: process.env.DB_DEV_PASSWORD,
+    database: process.env.DB_DEV_DB_NAME,
+    host: process.env.DB_DEV_HOST,
+    logging: false,
+    dialect: 'postgres',
   }
 }
 
