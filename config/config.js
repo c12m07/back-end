@@ -8,10 +8,10 @@ runDotEnv();
 
 const config = {
   development: {
-    username: "postgres",
-    password: "postgres",
-    database: "db_personal",
-    host: "localhost",
+    username: "db_a1dm_user",
+    password: "G6VwUvTduSeadfwMJeed1ZHZmmFNLroa",
+    database: "db_a1dm",
+    host: "dpg-ce0fvuen6mpu84u1srb0-a",
     logging: true,
     dialect: "postgres"
   },
